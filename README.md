@@ -1,25 +1,26 @@
-Rate Limiter
+# Rate Limiter
 A simple rate limiter implementation in Go for HTTP servers.
 
-Overview
+# Overview
 This project provides a middleware package for rate limiting HTTP requests based on client IP address and endpoint. It uses a sliding window algorithm to enforce rate limits for specific endpoints.
 
-Installation
+# Installation
 To use this package in your Go project, simply import it:
 
-go
-Copy code
+```
 import "github.com/manish2538/ratelimiter/impl"
+```
+
 Then, run go get to install the package:
 
-arduino
-Copy code
+```
 go get -u github.com/manish2538/ratelimiter/impl
-Usage
+```
+
+# Usage
 Here's an example of how to use the rate limiter middleware in your HTTP server:
 
-go
-Copy code
+```
 package main
 
 import (
@@ -58,13 +59,15 @@ func initRateLimiter() impl.RateLimiter {
 
 	return impl.NewRateLimiter(rateAlgorithm)
 }
-Configuration
+
+```
+# Configuration
 You can configure rate limits for specific endpoints by calling the SetEndpointLimit method of the rate limiter algorithm. The example above demonstrates how to set rate limits for two endpoints (/api/user and /api/profile).
 
-Contributing
+# Contributing
 Contributions are welcome! Please feel free to submit bug reports, feature requests, or pull requests.
 
-License
+# License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Feel free to modify the content as needed to fit your project's specific requirements and conventions.
